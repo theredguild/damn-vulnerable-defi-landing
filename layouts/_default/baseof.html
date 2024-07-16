@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ .Params.Description }}">
+    <meta name="keywords" content="{{ .Params.Keywords }}">
+    <title>
+    {{ block "title" . }}
+        {{ .Site.Title }}
+    {{ end }}
+    </title>
+    {{ template "_internal/opengraph.html" . }}
+    {{ template "_internal/twitter_cards.html" . }}
+    <link rel="stylesheet" href='{{ "css/main.css" | relURL }}'>
+    <script defer data-domain="damnvulnerabledefi.xyz" src="https://plausible.io/js/script.js"></script>
+  </head>
+  <body>
+    <header>
+        <div style="text-align: center;" class="container">
+          <h1><a href="{{ .Site.Home.RelPermalink }}">{{ .Site.Title }}</a></h1>
+        </div>
+    </header>
+    <div class="container">
+        {{ block "main" . }}
+        {{ end }}
+    </div>
+    <footer>
+      <p>
+        &lt; version {{ .Site.Params.CurrentVersion }} &gt;
+        <br>
+        by <a href="https://x.com/{{ .Site.Params.xHandle }}">{{ .Site.Params.xHandle }}</a></a>
+      </p>
+    </footer>
+  </body>
+</html>

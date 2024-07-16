@@ -1,0 +1,15 @@
+{{ define "title" }}
+    {{ .Title }} &ndash; {{ .Site.Title }}
+{{ end }}
+{{ define "main" }}
+    <h6><a href="{{.Site.Home.RelPermalink}}">&lt; Back to challenges</a></h6>
+    <section>
+    {{ .Content }}
+    <ul>
+        <!-- tree points to dir -->
+        <li><a href="{{.Site.Params.GithubRepository}}/tree/{{.Site.Params.CurrentVersion}}/src/{{.Params.contractsDir}}">See the contracts</a></li>
+        <!-- blob points to file -->
+        <li><a href="{{.Site.Params.GithubRepository}}/blob/{{.Site.Params.CurrentVersion}}/test/{{.Params.contractsDir}}/{{.Params.challengeFile}}">Solve the challenge</a></li>
+    </ul>
+    </section>
+{{ end }}

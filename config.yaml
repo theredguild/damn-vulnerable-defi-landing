@@ -1,0 +1,16 @@
+baseURL: https://damnvulnerabledefi.xyz/
+languageCode: en-us
+title: 'Damn Vulnerable DeFi'
+defaultContentLanguage: en
+contentDir: content
+staticDir: static
+relativeURLs: true
+disableKinds: ["sitemap","section","RSS"]
+
+params:
+  githubRepository: https://github.com/theredguild/damn-vulnerable-defi
+  xHandle: "theredguild"
+  support: https://github.com/theredguild/damn-vulnerable-defi/discussions
+  description: Learn smart contract security with the most vulnerable set of Solidity smart contracts ever witnessed.
+  keywords: ethereum, solidity, security, smart contracts, defi, ctf, challenges, education
+  currentVersion: v4.0.0

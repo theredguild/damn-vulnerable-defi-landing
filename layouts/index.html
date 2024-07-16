@@ -1,0 +1,58 @@
+{{ define "main" }}
+<section id="intro">
+  <p>Welcome to Damn Vulnerable DeFi. The training ground for security researchers, developers and educators to dive into smart contract security.</p>
+  <p>Are you ready to save the most vulnerable contracts ever coded?</p>
+  <p>Explore challenges featuring flashloans, price oracles, governance, NFTs, DEXs, lending pools, smart contract wallets, timelocks, vaults, meta-transactions, token distributions, upgradeability, and more!</p>
+</section>
+
+<section id="challenges">
+  <h1>Challenges</h1>
+  <table class="split-table">
+    <thead>
+      <tr>
+        <th style="text-align: left">#</th>
+        <th style="text-align: left">Name</th>
+        <th style="text-align: left"></th>
+      </tr>
+    </thead>
+    <tbody>
+      {{ range (where (.Site.Pages.ByParam "id") "Section" "challenges") }}
+      {{ if not .Draft }}
+      <tr>
+        <td>{{.Params.id}}</td>
+        <td><a href="{{.RelPermalink}}">{{.Title}}</a></td>
+      </tr> 
+      {{ end }}
+      {{ end }}
+    </tbody>
+  </table>
+</section>
+      
+<section id="how-to">
+  <h1>How to play</h1>
+  <p>Find all instructions to install, play, troubleshoot and other rules <a href="{{.Site.Params.GithubRepository}}">in the repository</a>.</p>
+</section>
+
+<section id="testimonials">
+  <h1>Testimonials</h1>
+  <div class="testimonial-cards">
+    <div class="card">
+      <p><i>"LGTM"</i></p>
+      <p>-- cryptotwitter security guru & influencer</p>
+    </div>
+    <div class="card">
+      <p><i>"In my days I'd have gone all-in into these bad boys"</i></p>
+      <p>-- retired DeFi degen</p>
+    </div>
+    <div class="card">
+      <p><i>"Catchy name! Got ROI projections on these pools? I'm game for seed round"</i></p>
+      <p>-- SF crypto investor</p>
+    </div>
+    <div class="card">
+      <p><i>"I've seen worse in prod"</i></p>
+      <p>-- OG solidity auditor</p>
+    </div>
+  </div>
+</section>
+
+{{ end }}

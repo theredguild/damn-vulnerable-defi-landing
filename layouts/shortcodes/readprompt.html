@@ -1,0 +1,4 @@
+{{- $challengeName := .Get "challenge" -}}
+{{- $file := printf "data/prompts/src/%s/README.md" $challengeName -}}
+{{- $content := readFile $file | markdownify -}}
+{{ $content }}
