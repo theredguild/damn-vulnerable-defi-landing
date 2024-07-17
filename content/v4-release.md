@@ -38,7 +38,7 @@ The rest of the challenges have been modified, but remain essentially the same.
 
 Damn Vulnerable DeFi has come a long way, with almost a year and a half since the [v3 release]({{< ref "v3-release" >}}) and almost 4 years since v1.
 
-V4 brings a**complete overhaul of the challenges**. The migration to Foundry required refactoring all JavaScript code to Solidity, which was not as cumbersome as I initially expected. Although it did require some rethinking around the challenges' structure, necessary cheatcodes, and new libraries.
+V4 brings a **complete overhaul of the challenges**. The migration to Foundry required refactoring all JavaScript code to Solidity, which was not as cumbersome as I initially expected. Although it did require some rethinking around the challenges' structure, necessary cheatcodes, and new libraries.
 
 **Upgrading dependencies** forced me to rework many challenges. Fortunately for the ecosystem (but not for Damn Vulnerable DeFi), libraries keep making it harder to write bad code, so I had to find workarounds to still misuse them or integrate them with unsafe code without being too obvious. I also removed all references to selfdestruct, which triggered non-trivial changes.
 
