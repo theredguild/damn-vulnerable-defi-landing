@@ -13,4 +13,4 @@ params:
   support: https://github.com/theredguild/damn-vulnerable-defi/discussions
   description: Learn smart contract security with the most vulnerable set of Solidity smart contracts ever witnessed.
   keywords: ethereum, solidity, security, smart contracts, defi, ctf, challenges, education
-  currentVersion: v4.0.0
+  currentVersion: v4.0.1
